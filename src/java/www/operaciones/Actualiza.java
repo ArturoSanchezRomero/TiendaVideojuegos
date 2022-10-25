@@ -32,7 +32,7 @@ public class Actualiza {
         return b;
     }
 
-    public String  consultar(){
+    public String consultar(){
     
         String resultado="";   
         try{
@@ -75,7 +75,7 @@ public class Actualiza {
                 resultado+="<td>"+rs.getString("TiempoEntrega")+"</td>";
                 resultado+="<td>"+rs.getString("NumeroPaginas")+"</td>";
                 resultado+="<td>"+rs.getString("Imagen")+"</td>";
-                resultado+="<td>"+"<form target=_SELF method=POST action='eliminacionMVC.jsp'>"
+                resultado+="<td>"+"<form target=_SELF method=POST action='formularioactualiza.jsp'>"
                         + "<input type=Hidden name=elemento value="+item+">"
                         + "<input type=Submit value='Actualiza'>"
                         + "</form>"+"</td>";

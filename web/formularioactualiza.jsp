@@ -41,6 +41,7 @@
         out.println("Error: "+se.getErrorCode());
         }
         
+        //Obtenemos los datos
         String item= request.getParameter("elemento");
         out.println("Elemento a actualizar :"+ item + "<br>");
 
@@ -74,9 +75,6 @@
         out.println("LError: "+se.getErrorCode());
         }
   
-            
-         
-         //Llenar el formulario
             %>
          
     </body>

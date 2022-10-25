@@ -75,9 +75,9 @@ public class Actualiza {
                 resultado+="<td>"+rs.getString("TiempoEntrega")+"</td>";
                 resultado+="<td>"+rs.getString("NumeroPaginas")+"</td>";
                 resultado+="<td>"+rs.getString("Imagen")+"</td>";
-                resultado+="<td>"+"<form target=_SELF method=POST action=eliminacionMVC.jsp>"
+                resultado+="<td>"+"<form target=_SELF method=POST action='eliminacionMVC.jsp'>"
                         + "<input type=Hidden name=elemento value="+item+">"
-                        + "<input type=Submit value=Eliminar>"
+                        + "<input type=Submit value='Actualiza'>"
                         + "</form>"+"</td>";
                 resultado+="</tr>";
             }
@@ -93,7 +93,8 @@ public class Actualiza {
         return resultado;
     }
 
-    public String actualiza(String id){
+    public String actualiza(String id, String titulo,String tipo,String precio,String autor, String genero, String formato, 
+    String tiempoEntrega,String editorial, String numeroPaginas, String imagen){
         String band="";
   
         try{
@@ -103,16 +104,19 @@ public class Actualiza {
             Class.forName(myDriver);
             Connection conn = DriverManager.getConnection(myUrl, "root", "");
            
-            String query = "DELETE FROM lectura where id ='"+id+"' ";
-            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            Statement st = conn.createStatement();
+            
+            int valor= st.executeUpdate("UPDATE lectura "
+                +"SET Nombre = '"+titulo+", Categoria ='"+tipo+"', Precio = "+precio+", Categoria ='"+autor+"', Fabricante ='"+genero+
+                "', Consola ='"+formato+"', Fecha ='"+tiempoEntrega+"', RangoEdad ='"+editorial+"', Idioma ='"+numeroPaginas+"', Idioma ='"+imagen
+                    +"' where id ='"+id+"' ");
 
-            boolean b=preparedStmt.execute();
       
-            if(b){
-                band+="No se actualizo";   
+            if(valor>0){
+                band+="<br>Se inserto correctamente";   
             }
             else{
-                band+="Se actualizo";     
+                band+="<br> No se inserto correctamente";     
             }
       
             conn.close();

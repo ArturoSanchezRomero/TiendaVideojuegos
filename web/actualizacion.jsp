@@ -18,16 +18,16 @@
         <h1>Resultado de la Actualizacion</h1>
         <%
             String id= request.getParameter("id");  
-            String titulo= request.getParameter("titulo");     
-            String tipo= request.getParameter("tipo");     
-            String precio= request.getParameter("precio");     
-            String autor= request.getParameter("autor");     
-            String genero= request.getParameter("genero");     
-            String formato= request.getParameter("formato");     
-            String tiempoEntrega= request.getParameter("tiempoEntrega");     
-            String editorial= request.getParameter("editorial");     
-            String numeroPaginas= request.getParameter("numeroPaginas"); 
-            String imagen= request.getParameter("imagen"); 
+            String titulo= request.getParameter("Titulo");     
+            String tipo= request.getParameter("Tipo");     
+            String precio= request.getParameter("Precio");     
+            String autor= request.getParameter("Autor");     
+            String genero= request.getParameter("Genero");     
+            String formato= request.getParameter("Formato");     
+            String tiempoEntrega= request.getParameter("TiempoEntrega");     
+            String editorial= request.getParameter("Editorial");     
+            String numeroPaginas= request.getParameter("NumeroPaginas"); 
+            String imagen= request.getParameter("Imagen"); 
     
         %>
     

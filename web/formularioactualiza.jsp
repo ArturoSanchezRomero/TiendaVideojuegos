@@ -55,15 +55,16 @@
         while (rs.next())
         {
         out.println("<input type=Hidden name='id' value="+item+">");
-        out.println("<br> <B> Nombre:  </b> <input type='Text' size='30' name='nom' value='"+rs.getString("Titulo")+"'>");
-        out.println("<br> <B> Tipo:  </b> <input type='Text' size='30' name='tipo' value='"+rs.getString("Tipo")+"'>");
-        out.println("<br> <B> Precio:  </b> <input type='Text' size='10' name='pre' value='"+rs.getFloat("Precio")+"'>");
-        out.println("<br> <B> Categoria:  </b> <input type='Text' size='30' name='cat' value='"+rs.getString("Autor")+"'>");
-        out.println("<br> <B> Fabricante:  </b> <input type='Text' size='30' name='fab' value='"+rs.getString("Genero")+"'>");
-        out.println("<br> <B> Consola:  </b> <input type='Text' size='30' name='con' value='"+rs.getString("Formato")+"'>");
-        out.println("<br> <B> Fecha de Lanzamiento:  </b> <input type='Text' size='30' name='fec' value='"+rs.getString("TiempoEntrega")+"'>");
-        out.println("<br> <B> Rango de Edad:  </b> <input type='Text' size='10' name='ran' value='"+rs.getString("NumeroPaginas")+"'>");
-        out.println("<br> <B> Idioma:  </b> <input type='Text' size='20' name='idi' value='"+rs.getString("Imagen")+"'>");
+        out.println("<br> <B> Titulo:  </b> <input type='Text' size='30' name='Titulo' value='"+rs.getString("Titulo")+"'>");
+        out.println("<br> <B> Tipo:  </b> <input type='Text' size='30' name='Tipo' value='"+rs.getString("Tipo")+"'>");
+        out.println("<br> <B> Precio:  </b> <input type='Text' size='10' name='Precio' value='"+rs.getFloat("Precio")+"'>");
+        out.println("<br> <B> Autor:  </b> <input type='Text' size='30' name='Autor' value='"+rs.getString("Autor")+"'>");
+        out.println("<br> <B> Genero:  </b> <input type='Text' size='30' name='Genero' value='"+rs.getString("Genero")+"'>");
+        out.println("<br> <B> Formato:  </b> <input type='Text' size='30' name='Formato' value='"+rs.getString("Formato")+"'>");
+        out.println("<br> <B> Tiempo de Entrega:  </b> <input type='Text' size='30' name='TiempoEntrega' value='"+rs.getString("TiempoEntrega")+"'>");
+        out.println("<br> <B> Editorial:  </b> <input type='Text' size='50' name='Editorial' value='"+rs.getString("Editorial")+"'>");
+        out.println("<br> <B> Rango de Edad:  </b> <input type='Text' size='10' name='NumeroPaginas' value='"+rs.getString("NumeroPaginas")+"'>");
+        out.println("<br> <B> Idioma:  </b> <input type='Text' size='20' name='Imagen' value='"+rs.getString("Imagen")+"'>");
         out.println("<br> <input type='Submit' value='Actualizar'>");
         }
         out.println("</form>");

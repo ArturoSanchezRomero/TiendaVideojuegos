@@ -73,6 +73,7 @@ public class Actualiza {
                 resultado+="<td>"+rs.getString("Genero")+"</td>" ;
                 resultado+="<td>"+rs.getString("Formato")+"</td>";
                 resultado+="<td>"+rs.getString("TiempoEntrega")+"</td>";
+                resultado+="<td>"+rs.getString("Editorial")+"</td>";
                 resultado+="<td>"+rs.getString("NumeroPaginas")+"</td>";
                 resultado+="<td>"+rs.getString("Imagen")+"</td>";
                 resultado+="<td>"+"<form target=_SELF method=POST action='formularioactualiza.jsp'>"
@@ -107,8 +108,8 @@ public class Actualiza {
             Statement st = conn.createStatement();
             
             int valor= st.executeUpdate("UPDATE lectura "
-                +"SET Nombre = '"+titulo+", Categoria ='"+tipo+"', Precio = "+precio+", Categoria ='"+autor+"', Fabricante ='"+genero+
-                "', Consola ='"+formato+"', Fecha ='"+tiempoEntrega+"', RangoEdad ='"+editorial+"', Idioma ='"+numeroPaginas+"', Idioma ='"+imagen
+                +"SET Titulo = '"+titulo+"', Tipo ='"+tipo+"', Precio = "+precio+", Autor ='"+autor+"', Genero ='"+genero+
+                "', Formato ='"+formato+"', TiempoEntrega ='"+tiempoEntrega+"', Editorial ='"+editorial+"', NumeroPaginas ='"+numeroPaginas+"', Imagen ='"+imagen
                     +"' where id ='"+id+"' ");
 
       

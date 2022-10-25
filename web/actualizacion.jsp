@@ -17,67 +17,27 @@
         <h1>Hello World!</h1>
         <h1>Resultado de la Actualizacion</h1>
         <%
-       String id= request.getParameter("id");     
-       String nombre= request.getParameter("nom");     
-       String precio= request.getParameter("pre");     
-       String categoria= request.getParameter("cat");     
-       String fabricante= request.getParameter("fab");     
-       String consola= request.getParameter("con");     
-       String fecha= request.getParameter("fec");     
-       String rango= request.getParameter("ran");     
-       String idioma= request.getParameter("idi"); 
-       /*
-       out.println("<br> Id: "+id);
-       out.println("<br> Nombre: "+nombre);
-       out.println("<br> Precio: "+precio);
-       out.println("<br> Categoria: "+categoria);
-       out.println("<br> Fabricante: "+fabricante);
-       out.println("<br> Consola: "+consola);
-       out.println("<br> Fecha: "+fecha);
-       out.println("<br> Rango: "+rango);
-       out.println("<br> Idioma: "+idioma);
-         */          
-            
-            %>
+            String id= request.getParameter("id");  
+            String titulo= request.getParameter("titulo");     
+            String tipo= request.getParameter("tipo");     
+            String precio= request.getParameter("precio");     
+            String autor= request.getParameter("autor");     
+            String genero= request.getParameter("genero");     
+            String formato= request.getParameter("formato");     
+            String tiempoEntrega= request.getParameter("tiempoEntrega");     
+            String editorial= request.getParameter("editorial");     
+            String numeroPaginas= request.getParameter("numeroPaginas"); 
+            String imagen= request.getParameter("imagen"); 
     
-            <%
-       
-       
-    try
-    {
-      // create a mysql database connection
-      String myDriver = "com.mysql.jdbc.Driver";
-      String myUrl = "jdbc:mysql://localhost:3306/gamestore";
-      Class.forName(myDriver);
-      Connection conn = DriverManager.getConnection(myUrl, "root", "");
-      
-      Statement st = conn.createStatement();
+        %>
+    
+        <%
+        www.operaciones.Actualiza i =new www.operaciones.Actualiza();
 
-      // note that i'm leaving "date_created" out of this insert statement
-        int valor= st.executeUpdate("UPDATE videojuego "
-          +"SET Nombre = '"+nombre+"', Precio = "+precio+", Categoria ='"+categoria+"', Fabricante ='"+fabricante+
-          "', Consola ='"+consola+"', Fecha ='"+fecha+"', RangoEdad ='"+rango+"', Idioma ='"+idioma+"' where id ='"+id+"' ");
-      
-        if(valor>0)
-        {
-         out.println("<br>Se inserto correctamente");   
-        }
-        else
-        {
-         out.println("<br> No se inserto correctamente");    
-        }
-     
-      conn.close();
-    }
-    catch (Exception e)
-    {
-      out.println("Got an exception!");
-      out.println(e.getMessage());
-    }
-
-       
-       
-       %>
+        out.println(i.actualiza(id,titulo, tipo, precio, 
+            autor, genero, formato, tiempoEntrega, 
+            editorial, numeroPaginas, imagen));
+        %>   
        
        <BR>
         <BR>

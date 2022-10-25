@@ -48,21 +48,22 @@
         try
         {
         stat=conn.createStatement();
-        rs=stat.executeQuery("use gamestore;");
-        rs=stat.executeQuery("select * from videojuego where id= '"+item+"'");
+        rs=stat.executeQuery("use bibliotecadigital;");
+        rs=stat.executeQuery("select * from lectura where id= '"+item+"'");
 
         out.println("<form method='POST' target='_SELF' action='actualizacion.jsp'>");
         while (rs.next())
         {
         out.println("<input type=Hidden name='id' value="+item+">");
-        out.println("<br> <B> Nombre:  </b> <input type='Text' size='30' name='nom' value='"+rs.getString("Nombre")+"'>");
+        out.println("<br> <B> Nombre:  </b> <input type='Text' size='30' name='nom' value='"+rs.getString("Titulo")+"'>");
+        out.println("<br> <B> Tipo:  </b> <input type='Text' size='30' name='tipo' value='"+rs.getString("Tipo")+"'>");
         out.println("<br> <B> Precio:  </b> <input type='Text' size='10' name='pre' value='"+rs.getFloat("Precio")+"'>");
-        out.println("<br> <B> Categoria:  </b> <input type='Text' size='30' name='cat' value='"+rs.getString("Categoria")+"'>");
-        out.println("<br> <B> Fabricante:  </b> <input type='Text' size='30' name='fab' value='"+rs.getString("Fabricante")+"'>");
-        out.println("<br> <B> Consola:  </b> <input type='Text' size='30' name='con' value='"+rs.getString("Consola")+"'>");
-        out.println("<br> <B> Fecha de Lanzamiento:  </b> <input type='Text' size='30' name='fec' value='"+rs.getString("Fecha")+"'>");
-        out.println("<br> <B> Rango de Edad:  </b> <input type='Text' size='10' name='ran' value='"+rs.getString("RangoEdad")+"'>");
-        out.println("<br> <B> Idioma:  </b> <input type='Text' size='20' name='idi' value='"+rs.getString("Idioma")+"'>");
+        out.println("<br> <B> Categoria:  </b> <input type='Text' size='30' name='cat' value='"+rs.getString("Autor")+"'>");
+        out.println("<br> <B> Fabricante:  </b> <input type='Text' size='30' name='fab' value='"+rs.getString("Genero")+"'>");
+        out.println("<br> <B> Consola:  </b> <input type='Text' size='30' name='con' value='"+rs.getString("Formato")+"'>");
+        out.println("<br> <B> Fecha de Lanzamiento:  </b> <input type='Text' size='30' name='fec' value='"+rs.getString("TiempoEntrega")+"'>");
+        out.println("<br> <B> Rango de Edad:  </b> <input type='Text' size='10' name='ran' value='"+rs.getString("NumeroPaginas")+"'>");
+        out.println("<br> <B> Idioma:  </b> <input type='Text' size='20' name='idi' value='"+rs.getString("Imagen")+"'>");
         out.println("<br> <input type='Submit' value='Actualizar'>");
         }
         out.println("</form>");

@@ -18,7 +18,7 @@
         <%
             www.operaciones.ConsultaParametrizada cp= new www.operaciones.ConsultaParametrizada();
             if (cp.conectar()){
-                out.println(cp.consultar(titulo, cmbTipo));
+                out.println(cp.consultaMini(titulo, cmbTipo));
             }
             else{
                out.println("No se pudo realizar la consulta");  

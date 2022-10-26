@@ -21,7 +21,8 @@
 
         %>
 
-        <%            www.operaciones.Inserta i = new www.operaciones.Inserta();
+        <%            
+            www.operaciones.Inserta i = new www.operaciones.Inserta();
 
             out.println(i.insercion(titulo, tipo, precio,
                     autor, genero, formato, tiempoEntrega,

@@ -130,4 +130,56 @@ public class Actualiza {
         }
         return band;
     }
+    
+    public String formularioActualiza(String item){
+        String resultado ="";
+    //Falta hacer la consulta
+            Connection conn = null;
+            Statement stat = null;
+            ResultSet rs = null;
+            try {
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
+            } catch (Exception ex) {
+                resultado +=("Fallo driver: " + ex);
+            }
+
+            try {
+                conn = DriverManager.getConnection("jdbc:mysql://localhost/", "root", "");
+
+            } catch (SQLException se) {
+                resultado +=("Mensaje: " + se.getMessage());
+                resultado +=("Estado: " + se.getSQLState());
+                resultado +=("Error: " + se.getErrorCode());
+            }
+            
+            try {
+                stat = conn.createStatement();
+                rs = stat.executeQuery("use bibliotecadigital;");
+                rs = stat.executeQuery("select * from lectura where id= '" + item + "'");
+
+                resultado +=("<form method='POST' target='_SELF' action='actualizacion.jsp'>");
+                while (rs.next()) {
+                    resultado +=("<input type=Hidden name='id' value=" + item + ">");
+                    resultado +=("<br> <B> Titulo:  </b> <input type='Text' size='30' name='Titulo' value='" + rs.getString("Titulo") + "'>");
+                    resultado +=("<br> <B> Tipo:  </b> <input type='Text' size='30' name='Tipo' value='" + rs.getString("Tipo") + "'>");
+                    resultado +=("<br> <B> Precio:  </b> <input type='Text' size='10' name='Precio' value='" + rs.getFloat("Precio") + "'>");
+                    resultado +=("<br> <B> Autor:  </b> <input type='Text' size='30' name='Autor' value='" + rs.getString("Autor") + "'>");
+                    resultado +=("<br> <B> Genero:  </b> <input type='Text' size='30' name='Genero' value='" + rs.getString("Genero") + "'>");
+                    resultado +=("<br> <B> Formato:  </b> <input type='Text' size='30' name='Formato' value='" + rs.getString("Formato") + "'>");
+                    resultado +=("<br> <B> Tiempo de Entrega:  </b> <input type='Text' size='30' name='TiempoEntrega' value='" + rs.getString("TiempoEntrega") + "'>");
+                    resultado +=("<br> <B> Editorial:  </b> <input type='Text' size='50' name='Editorial' value='" + rs.getString("Editorial") + "'>");
+                    resultado +=("<br> <B> Rango de Edad:  </b> <input type='Text' size='10' name='NumeroPaginas' value='" + rs.getString("NumeroPaginas") + "'>");
+                    resultado +=("<br> <B> Idioma:  </b> <input type='Text' size='20' name='Imagen' value='" + rs.getString("Imagen") + "'>");
+                    resultado +=("<br> <input type='Submit' value='Actualizar'>");
+                }
+                resultado +=("</form>");
+
+            } catch (SQLException se) {
+                resultado +=("LMensaje: " + se.getMessage());
+                resultado +=("LEstado: " + se.getSQLState());
+                resultado +=("LError: " + se.getErrorCode());
+            }
+            
+            return resultado;
+    }
 }

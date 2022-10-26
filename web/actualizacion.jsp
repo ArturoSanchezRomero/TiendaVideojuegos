@@ -38,11 +38,6 @@
                     editorial, numeroPaginas, imagen));
         %>   
 
-        <BR>
-        <BR>
-        <a  href="index.html" target="_SELF" > Volver a Index </a>
-        <BR>
-
     </section>
 </main>
 

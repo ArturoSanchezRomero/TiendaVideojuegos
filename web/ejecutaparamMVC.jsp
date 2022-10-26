@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="view/header.html"%>
-<%@include file="menu.jsp"%>
+<%@include file="menu2.jsp"%>
 <main id="main-content">
     <section>
         <header>
@@ -9,10 +9,10 @@
 
 
         <% 
-           String titulo =request.getParameter("titulo");
-           out.println("Tipo: "+titulo);
            String cmbTipo =request.getParameter("cmbTipo");
-           out.println("Nombre: "+cmbTipo);
+           out.println("Tipo: "+cmbTipo);
+           String titulo =request.getParameter("titulo");
+           out.println("Titulo: "+titulo);
         %>    
 
         <%
@@ -24,6 +24,8 @@
                out.println("No se pudo realizar la consulta");  
             }
            %>
+    </section>
+</main>
 
 <%@include file="view/lateral1.html"%>
 <%@include file="view/lateral2.html"%>

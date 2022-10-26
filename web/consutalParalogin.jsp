@@ -5,7 +5,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="view/header.html"%>
-<%@include file="menu2.jsp"%>
+<%@include file="menu.jsp"%>
 <main id="main-content">
     <section>
         <header>

@@ -22,7 +22,7 @@
                 out.print(c.verficarDatos(usuario, password));
                 if(c.verficarDatos(usuario, password)){
                     %>
-                    <%@include file="index.html"%>
+                    <%@include file="principal.jsp"%>
                     <%
                 }else{
                     out.print("<script>alert('Usuario o contraseña incorrectos')</script>");

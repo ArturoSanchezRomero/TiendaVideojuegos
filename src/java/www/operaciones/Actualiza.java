@@ -58,6 +58,7 @@ public class Actualiza {
             resultado+="<th> Género</th>";
             resultado+="<th> Formato</th>";
             resultado+="<th> Tiempo de entrega</th>";
+            resultado+="<th> Editorial</th>";
             resultado+="<th> Número de páginas</th>";
             resultado+="<th> Imagen</th>";
 

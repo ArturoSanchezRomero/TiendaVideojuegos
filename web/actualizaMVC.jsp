@@ -4,15 +4,19 @@
     Author     : giner
 --%>
 
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Operacion Actualiza con MVC</h1>
+<%@include file="view/header.html"%>
+<%@include file="menu.jsp"%>
+
+<main id="main-content">
+    <section>
+        <header>
+            <h1>Operacion Actualiza con MVC</h1>
+        </header>
         <%
             www.operaciones.Actualiza e= new www.operaciones.Actualiza();
     
@@ -24,5 +28,9 @@
               out.println("Error en la conexion");
             }        
         %>
-    </body>
-</html>
+    </section>
+</main>
+
+<%@include file="view/lateral1.html"%>
+<%@include file="view/lateral2.html"%>
+<%@include file="view/footer.html"%>

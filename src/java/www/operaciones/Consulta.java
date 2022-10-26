@@ -64,7 +64,7 @@ public class Consulta {
 
             while (rs.next()){
                 resultado+="<tr>";
-                resultado+="<td>"+rs.getString("Id")+"</td>";
+                resultado+="<td>"+rs.getString("id")+"</td>";
                 resultado+="<td>"+rs.getString("Titulo")+"</td>";
                 resultado+="<td>"+rs.getString("Tipo")+"</td>";
                 resultado+="<td>"+rs.getFloat("Precio")+"</td>";

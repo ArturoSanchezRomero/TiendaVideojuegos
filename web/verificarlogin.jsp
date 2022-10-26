@@ -19,7 +19,17 @@
             
             www.operaciones.ConsultaLogin c= new www.operaciones.ConsultaLogin();
             if(c.conectar()){
-               out.println( c.verficarDatos(usuario, password) );
+                out.print(c.verficarDatos(usuario, password));
+                if(c.verficarDatos(usuario, password)){
+                    %>
+                    <%@include file="index.html"%>
+                    <%
+                }else{
+                    out.print("<script>alert('Usuario o contraseña incorrectos')</script>");
+                    %>
+                    <%@include file="login.jsp"%>
+                    <%
+                }
             }
             else{
                 out.print("No se puede realizar la consulta");

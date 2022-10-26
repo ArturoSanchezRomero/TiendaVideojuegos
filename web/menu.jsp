@@ -19,7 +19,4 @@
     <a  href="eliminaMVC.jsp" >Operación Elimina </a>
     <BR>
     <a  href="actualizaMVC.jsp" >Operación Actualiza </a>
-    <BR>
-    <BR>
-    <a  href="login.jsp" >Login </a>
 </nav> 

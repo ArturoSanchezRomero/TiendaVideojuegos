@@ -9,11 +9,10 @@
 <%@include file="view/header.html"%>
 <!-- menu.html -->
             <nav id="main-nav">
-                <a href="index.jsp" class="menu" id="mnuInicio">Login</a>
+                <a href="index.html" class="menu" id="mnuInicio">Inicio</a>
             </nav> 
 <!-- login.html -->
             <main id="main-content">
-                <script src="js/ctrlLogin.js"></script>
                 <section>
                     <header>
                         <h3>Ingresar al Sistema</h3>
@@ -21,7 +20,7 @@
                     <script src="js/ctrlLogin.js"></script>
                     <form id="frmLogin" name="frmLogin" method="post" action="verificarlogin.jsp">
                         <label>Correo</label> 
-                        <input type="email" id="txtCorreoUsu" name="txtCorreoUsu" placeholder="gmail" required/>
+                        <input type="email" id="txtCorreoUsu" name="txtCorreoUsu" placeholder="Gmail" required/>
                         <br/>
                         <br/>
                         <label>Contrase&ntilde;a</label> 

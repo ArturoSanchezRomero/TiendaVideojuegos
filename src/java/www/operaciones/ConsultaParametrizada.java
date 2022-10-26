@@ -33,7 +33,7 @@ public class ConsultaParametrizada {
         return b;
     }
      
-    public String  consultar(String criterio){
+    public String  consultar(String titulo, String tipo){
     
         String resultado="";   
         try{
@@ -47,7 +47,7 @@ public class ConsultaParametrizada {
         try{
             stat=conn.createStatement();
             rs=stat.executeQuery("use bibliotecadigital;");
-            rs=stat.executeQuery("select * from lectura where Titulo LIKE '%"+criterio+"%'");
+            rs=stat.executeQuery("select * from lectura where Titulo LIKE '%"+titulo+"%' and Tipo = '"+tipo+"'");
             String datos;
             resultado+="<table border=1>";
             resultado+="<th> Id</th>";

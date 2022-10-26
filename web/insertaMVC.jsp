@@ -7,7 +7,7 @@
     <script src="js/#"></script>
     <section>
         <header>
-            <h3>Insertar</h3>
+            <h3>Insertar un nuevo libro</h3>
         </header>
         <script src="js/formulario.js"></script>
         <form id="formulario" name="formulario" method="POST" target="_SELF" action="insercionMVC.jsp">

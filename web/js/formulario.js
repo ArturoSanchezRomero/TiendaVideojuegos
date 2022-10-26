@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-var expPrecio = /^[0-9]+$/;
-var expNumPag = /^[0-9]+$/;
+var expPrecio = /^[0-9]$/;
+var expNumPag = /^[0-9]$/;
+var extTiempo = /^[0-1][a,z]$/;
 
 function validacion() {
     var verificar = true;
@@ -30,7 +31,7 @@ function validacion() {
         alert("Falta el Formato");
         document.formulario.formato.focus();
         verificar = false;
-    }else if (document.formulario.tiempoEntrega.value) {
+    }else if (!extTiempo.test(document.formulario.tiempoEntrega.value)) {
         alert("Falta el Tiempo de Entrega");
         document.formulario.tiempoEntrega.focus();
         verificar = false;

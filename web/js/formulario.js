@@ -42,6 +42,10 @@ function validacion() {
         alert("inserta un nuero entero");
         document.formulario.numeroPaginas.focus();
         verificar = false;
+    }else if (!expNumPag.test(document.formulario.imagen.value)) {
+        alert("Falta la imagen");
+        document.formulario.imagen.focus();
+        verificar = false;
     }
 
 

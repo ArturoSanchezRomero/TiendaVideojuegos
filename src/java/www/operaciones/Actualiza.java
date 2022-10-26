@@ -61,6 +61,7 @@ public class Actualiza {
             resultado+="<th> Editorial</th>";
             resultado+="<th> Número de páginas</th>";
             resultado+="<th> Imagen</th>";
+            resultado+="<th> Operación</th>";
 
             while (rs.next()){
                 resultado+="<tr>";

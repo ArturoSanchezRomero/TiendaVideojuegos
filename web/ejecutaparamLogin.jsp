@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="view/header.html"%>
-<%@include file="menu.jsp"%>
+<%@include file="menu2.jsp"%>
 <main id="main-content">
     <section>
         <header>
@@ -18,7 +18,7 @@
         <%
             www.operaciones.ConsultaParametrizada cp= new www.operaciones.ConsultaParametrizada();
             if (cp.conectar()){
-                out.println(cp.consultar(titulo, cmbTipo));
+                out.println(cp.consultaMini(titulo, cmbTipo));
             }
             else{
                out.println("No se pudo realizar la consulta");  

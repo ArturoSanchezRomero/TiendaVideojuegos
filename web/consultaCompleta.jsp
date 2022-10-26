@@ -1,7 +1,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="view/header.html"%>
-<%@include file="menu.jsp"%>
+<%@include file="menu2.jsp"%>
 <main id="main-content">
     <section>
         <header>

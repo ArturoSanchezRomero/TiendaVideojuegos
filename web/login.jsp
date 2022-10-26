@@ -13,7 +13,6 @@
             </nav> 
 <!-- login.html -->
             <main id="main-content">
-                <script src="js/ctrlLogin.js"></script>
                 <section>
                     <header>
                         <h3>Ingresar al Sistema</h3>

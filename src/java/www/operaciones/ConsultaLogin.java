@@ -49,10 +49,10 @@ public class ConsultaLogin {
             boolean b=preparedStmt.execute();
       
             if(b){
-                band+="No se elimino";   
+                band+="Hola";   
             }
             else{
-                band+="Se elimino";     
+                band+="No existe la cuenta";     
             }
       
             conn.close();

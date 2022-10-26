@@ -15,16 +15,18 @@
         <h1>Resultado de la consulta parametrizada</h1>
         <% 
            String titulo =request.getParameter("titulo");
-           out.println("Valor: "+titulo);
+           out.println("Tipo: "+titulo);
+           String cmbTipo =request.getParameter("cmbTipo");
+           out.println("Nombre: "+cmbTipo);
         %>    
     
         <%
             www.operaciones.ConsultaParametrizada cp= new www.operaciones.ConsultaParametrizada();
             if (cp.conectar()){
-                out.println(cp.consultar(titulo));
+                out.println(cp.consultar(titulo, cmbTipo));
             }
             else{
-               out.println("Nose pudo realizar la consulta");  
+               out.println("No se pudo realizar la consulta");  
             }
            %>
 

@@ -33,8 +33,9 @@ public class ConsultaLogin {
         return b;
     }
 
-    public String verficarDatos(String Usuario, String Password){
-        String band="";
+    public boolean verficarDatos(String Usuario, String Password){
+        String resultado="";
+        boolean b=false;
   
         try{
    
@@ -42,25 +43,26 @@ public class ConsultaLogin {
             String myUrl = "jdbc:mysql://localhost:3306/bibliotecadigital";
             Class.forName(myDriver);
             Connection conn = DriverManager.getConnection(myUrl, "root", "");
-           
-            String query = "select * from lectura where Usuario = "+Usuario+" and Password="+Password;
-            PreparedStatement preparedStmt = conn.prepareStatement(query);
 
-            boolean b=preparedStmt.execute();
-      
-            if(b){
-                band+="Hola";   
+            Statement st = conn.createStatement();
+
+            // note that i'm leaving "date_created" out of this insert statement
+            rs = st.executeQuery("select * from login where Usuario = '"+Usuario+"' and Password= '"+Password+"';");
+            rs.next();
+            if(rs.getRow()==1){
+                resultado+="Valor encontrado";   
+                b=true;
             }
             else{
-                band+="No existe la cuenta";     
+                resultado+="Falso";    
             }
       
             conn.close();
         }
         catch (Exception e){
-            band+="Got an exception! ";
-            band+=e.getMessage();
+            resultado+="Got an exception! ";
+            resultado+=e.getMessage();
         }
-        return band;
+        return b;
     }
 }

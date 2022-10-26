@@ -1,8 +1,3 @@
-<%-- 
-    Document   : insertaMVC
-    Created on : 29/09/2022, 12:38:17 PM
-    Author     : giner
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="view/header.html"%>

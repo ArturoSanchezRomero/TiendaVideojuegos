@@ -11,7 +11,7 @@
         <header>
             <h3>Consulta</h3>
         </header>
-        <form target="_SELF" method="POST" action="ejecutaparamMVC.jsp">
+        <form target="_SELF" method="POST" action="ejecutaConsultaParametros.jsp">
             <label>Tipo</label>
             <select name="cmbTipo" id="cmbTipo" required>
                 <option value="">Seleccione</option>

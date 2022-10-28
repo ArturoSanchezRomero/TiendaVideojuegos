@@ -7,12 +7,9 @@
         <header>
             <h1>Resultado de la Eliminacion</h1>
         </header>
-        
         <%
             String item= request.getParameter("elemento");    
-        %>
-        
-        <%
+            
             www.operaciones.Elimina e = new www.operaciones.Elimina();
               out.println( e.eliminar(item) );
         %>        

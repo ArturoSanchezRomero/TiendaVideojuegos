@@ -33,7 +33,7 @@ public class Consulta {
         return b;
     }
 
-    public String  consultar(){
+    public String consultar(){
 
         String resultado="";   
         try{
@@ -59,6 +59,7 @@ public class Consulta {
             resultado+="<th> Género</th>";
             resultado+="<th> Formato</th>";
             resultado+="<th> Tiempo de entrega</th>";
+            resultado+="<th> Editorial</th>";
             resultado+="<th> Número de páginas</th>";
             resultado+="<th> Imagen</th>";
 
@@ -72,6 +73,7 @@ public class Consulta {
                 resultado+="<td>"+rs.getString("Genero")+"</td>" ;
                 resultado+="<td>"+rs.getString("Formato")+"</td>";
                 resultado+="<td>"+rs.getString("TiempoEntrega")+"</td>";
+                resultado+="<td>"+rs.getString("Editorial")+"</td>";
                 resultado+="<td>"+rs.getString("NumeroPaginas")+"</td>";
                 resultado+="<td>"+rs.getString("Imagen")+"</td>";
                 resultado+="</tr>";
@@ -88,7 +90,8 @@ public class Consulta {
         return resultado;
     }
     
-    public String  consultaUno(String item){
+    // ??
+    public String consultaUno(String item){
 
         String resultado="";   
         try{
@@ -104,7 +107,7 @@ public class Consulta {
             stat=conn.createStatement();
             rs=stat.executeQuery("use bibliotecadigital;");
             rs=stat.executeQuery("select * from lectura where id = '"+item+"'");
-            String datos;
+
             resultado+="<table border=1>";
             resultado+="<th> Id</th>";
             resultado+="<th> Titulo</th>";
@@ -114,6 +117,7 @@ public class Consulta {
             resultado+="<th> Género</th>";
             resultado+="<th> Formato</th>";
             resultado+="<th> Tiempo de entrega</th>";
+            resultado+="<th> Editorial</th>";
             resultado+="<th> Número de páginas</th>";
             resultado+="<th> Imagen</th>";
 
@@ -127,6 +131,7 @@ public class Consulta {
                 resultado+="<td>"+rs.getString("Genero")+"</td>" ;
                 resultado+="<td>"+rs.getString("Formato")+"</td>";
                 resultado+="<td>"+rs.getString("TiempoEntrega")+"</td>";
+                resultado+="<td>"+rs.getString("Editorial")+"</td>";
                 resultado+="<td>"+rs.getString("NumeroPaginas")+"</td>";
                 resultado+="<td>"+rs.getString("Imagen")+"</td>";
                 resultado+="</tr>";

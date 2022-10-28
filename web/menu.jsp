@@ -8,16 +8,16 @@
 <!-- menu.html -->
 <nav id="main-nav">
     <h2> Operaciones CRUD con  MVC </h2>
-    <BR>
+    
     <a  href="consultaMVC.jsp"> Consultar Todos </a>
     <BR><BR>
-    <a  href="consutalParalogin.jsp" >Consulta Parametrizada</a>
+    <a  href="consultaConParametrosLogin.jsp" >Consulta Parametrizada</a>
     <BR><BR>
-    <a  href="insertaMVC.jsp" >Operación Inserta </a>
+    <a  href="insertaMVC.jsp" >Insertar </a>
     <BR><BR>
-    <a  href="eliminaMVC.jsp" >Operación Elimina </a>
+    <a  href="eliminaMVC.jsp" >Eliminar </a>
     <BR><BR>
-    <a  href="actualizaMVC.jsp" >Operación Actualiza </a>
+    <a  href="actualizaMVC.jsp" >Actualizar </a>
     <BR><BR>
     <a  href="index.jsp" > Salir </a>
 </nav>

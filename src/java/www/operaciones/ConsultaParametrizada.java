@@ -137,4 +137,55 @@ public class ConsultaParametrizada {
 
         return resultado;
     }
+    
+    public String consultaMiniLogin(String titulo, String tipo){
+    
+        String resultado="";   
+
+        try{
+            conn=DriverManager.getConnection("jdbc:mysql://localhost/","root","");
+        } catch (SQLException se){
+            resultado+="Mensaje: "+se.getMessage();
+            resultado+="Estado: "+se.getSQLState();
+            resultado+="Error: "+se.getErrorCode();
+        }
+        
+        try{
+            stat=conn.createStatement();
+            rs=stat.executeQuery("use bibliotecadigital;");
+            rs=stat.executeQuery("select * from lectura where Titulo LIKE '%"+titulo+"%' and Tipo = '"+tipo+"'");
+            
+            resultado+="<table border=1>";
+            resultado+="<th> Id</th>";
+            resultado+="<th> Titulo</th>";
+            resultado+="<th> Precio</th>";
+            resultado+="<th> Autor</th>";
+            resultado+="<th> Género</th>";
+            resultado+="<th> Ver más</th>";
+
+        while (rs.next()){
+            String item=rs.getString("Id");
+            resultado+="<tr>";
+            resultado+="<td>"+rs.getString("Id")+"</td>";
+            resultado+="<td>"+rs.getString("Titulo")+"</td>";
+            resultado+="<td>"+rs.getFloat("Precio")+"</td>";
+            resultado+="<td>"+rs.getString("Autor")+"</td>";
+            resultado+="<td>"+rs.getString("Genero")+"</td>" ;
+            resultado+="<td>"+"<form target=_SELF method=POST action='consultaUnoDetalles.jsp'>"
+                        + "<input type=Hidden name='elemento' value="+item+">"
+                        + "<input type=Submit value='Detalles'>"
+                        + "</form>"+"</td>";
+            resultado+="</tr>";
+        }
+
+        resultado+="</table>";
+
+        } catch (SQLException se){
+            resultado+="LMensaje: "+se.getMessage();
+            resultado+="LEstado: "+se.getSQLState();
+            resultado+="LError: "+se.getErrorCode();
+        }
+
+        return resultado;
+    }
 }

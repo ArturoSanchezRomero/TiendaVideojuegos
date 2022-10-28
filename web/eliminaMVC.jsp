@@ -7,7 +7,6 @@
         <header>
             <h1>Operacion Elimina con MVC</h1>
         </header>
-
         <%
             www.operaciones.Elimina e = new www.operaciones.Elimina();
 

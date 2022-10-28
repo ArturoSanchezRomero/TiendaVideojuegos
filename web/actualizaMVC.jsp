@@ -20,8 +20,7 @@
         <%
             www.operaciones.Actualiza e= new www.operaciones.Actualiza();
     
-            if(e.conectar())
-            {
+            if(e.conectar()){
               out.println(e.consultar());
             }
             else{

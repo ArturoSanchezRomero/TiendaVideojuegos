@@ -59,6 +59,7 @@ public class Elimina {
             resultado+="<th> Género</th>";
             resultado+="<th> Formato</th>";
             resultado+="<th> Tiempo de entrega</th>";
+            resultado+="<th> Editorial</th>";
             resultado+="<th> Número de páginas</th>";
             resultado+="<th> Imagen</th>";
             resultado+="<th> Operación</th>";
@@ -75,6 +76,7 @@ public class Elimina {
                 resultado+="<td>"+rs.getString("Genero")+"</td>" ;
                 resultado+="<td>"+rs.getString("Formato")+"</td>";
                 resultado+="<td>"+rs.getString("TiempoEntrega")+"</td>";
+                resultado+="<td>"+rs.getString("Editorial")+"</td>";
                 resultado+="<td>"+rs.getString("NumeroPaginas")+"</td>";
                 resultado+="<td>"+rs.getString("Imagen")+"</td>";
                 resultado+="<td>"+"<form target=_SELF method=POST action=eliminacionMVC.jsp>"

@@ -13,7 +13,8 @@
         <form id="formulario" name="formulario" method="POST" target="_SELF" action="insercionMVC.jsp">
             <BR>
             <B> Título:  </b>
-            <input type="Text" size="30" name="titulo" id="titulo" required>
+            <input type="Text" size="39" name="titulo" id="titulo" required>
+            <br>
             <br>
             <B> Tipo:  </b>
             <select name="tipo" id="cmbTipo" required>
@@ -23,14 +24,18 @@
                 <option value="Revista">Revista</option>
             </select>
             <br>
+            <br>
             <B> Precio:  </b>
             <input type="number" min="1" name="precio" id="precio" required>
             <br>
+            <br>
             <B> Autor:  </b>
-            <input type="Text" size="10" name="autor" id="autor" required>
+            <input type="Text" size="30" name="autor" id="autor" required>
+            <br>
             <br>
             <B> Género:  </b>
-            <input type="Text" size="50" name="genero" id="genero" required>
+            <input type="Text" size="28" name="genero" id="genero" required>
+            <br>
             <br>
             <B> Formato:  </b>
             <select name="tipo" id="cmbTipo" required>
@@ -39,17 +44,22 @@
                 <option value="Impreso">Impreso</option>
             </select>
             <br>
+            <br>
             <B> Tiempo de entrega:  </b>
-            <input type="Text" size="30" name="tiempoEntrega" id="tiempoEntrega" required>
+            <input type="Text" size="20" name="tiempoEntrega" id="tiempoEntrega" required>
+            <br>
             <br>
             <B> Editorial:  </b>
-            <input type="Text" size="10" name="editorial" id="editorial" required>
+            <input type="Text" size="20" name="editorial" id="editorial" required>
+            <br>
             <br>
             <B> Número de Páginas:  </b>
             <input type="number" min="1" name="numeroPaginas" id="numeroPaginas" required>
             <br>
+            <br>
             <B> Imagen:  </b>
             <input type="Text" min="1" name="imagen" id="imagen" required>
+            <br>
             <br>
             <input type="Submit" id="enviar" value="Insertar" >
         </form>

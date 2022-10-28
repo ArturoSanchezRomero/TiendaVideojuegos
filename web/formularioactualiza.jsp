@@ -17,7 +17,6 @@
         <header>
             <h1>Actualiza el producto</h1>
         </header>
-
         <%
             String item = request.getParameter("elemento");
             out.println("Elemento a actualizar :" + item + "<br>");

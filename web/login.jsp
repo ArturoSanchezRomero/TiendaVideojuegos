@@ -9,6 +9,7 @@
 <%@include file="view/header.html"%>
 <!-- menu.html -->
             <nav id="main-nav">
+                <h2> Menú </h2>
                 <a href="index.jsp" class="menu" id="mnuInicio">Inicio</a>
             </nav> 
 <!-- login.html -->

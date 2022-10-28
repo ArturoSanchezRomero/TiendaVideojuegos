@@ -8,7 +8,6 @@
 <!-- menu.html -->
 <nav id="main-nav">
     <h2> Menú </h2>
-    </br>
     <a  href="index.jsp"> Inicio </a>
     <BR>
     <BR>

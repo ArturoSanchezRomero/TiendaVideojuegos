@@ -8,7 +8,7 @@
 <!-- menu.html -->
 <nav id="main-nav">
     <h2> Operaciones CRUD con  MVC </h2>
-    <BR><BR>
+    <BR>
     <a  href="consultaMVC.jsp"> Consultar Todos </a>
     <BR><BR>
     <a  href="consutalParalogin.jsp" >Consulta Parametrizada</a>

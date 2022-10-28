@@ -38,7 +38,6 @@ public class ConsultaLogin {
         boolean b=false;
   
         try{
-   
             String myDriver = "com.mysql.jdbc.Driver";
             String myUrl = "jdbc:mysql://localhost:3306/bibliotecadigital";
             Class.forName(myDriver);

@@ -90,6 +90,7 @@ public class ConsultaParametrizada {
     public String  consultaMini(String titulo, String tipo){
     
         String resultado="";   
+
         try{
             conn=DriverManager.getConnection("jdbc:mysql://localhost/","root","");
         } catch (SQLException se){
@@ -97,12 +98,12 @@ public class ConsultaParametrizada {
             resultado+="Estado: "+se.getSQLState();
             resultado+="Error: "+se.getErrorCode();
         }
-
+        
         try{
             stat=conn.createStatement();
             rs=stat.executeQuery("use bibliotecadigital;");
             rs=stat.executeQuery("select * from lectura where Titulo LIKE '%"+titulo+"%' and Tipo = '"+tipo+"'");
-            String datos;
+            
             resultado+="<table border=1>";
             resultado+="<th> Id</th>";
             resultado+="<th> Titulo</th>";

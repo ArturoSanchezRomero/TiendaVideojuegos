@@ -19,7 +19,6 @@
             
             www.operaciones.ConsultaLogin c= new www.operaciones.ConsultaLogin();
             if(c.conectar()){
-                out.print(c.verficarDatos(usuario, password));
                 if(c.verficarDatos(usuario, password)){
                     %>
                     <%@include file="principal.jsp"%>

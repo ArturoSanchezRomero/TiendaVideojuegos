@@ -171,7 +171,7 @@ public class ConsultaParametrizada {
             resultado+="<td>"+rs.getFloat("Precio")+"</td>";
             resultado+="<td>"+rs.getString("Autor")+"</td>";
             resultado+="<td>"+rs.getString("Genero")+"</td>" ;
-            resultado+="<td>"+"<form target=_SELF method=POST action='consultaUnoDetalles.jsp'>"
+            resultado+="<td>"+"<form target=_SELF method=POST action='consultaUnoDetallesLogin.jsp'>"
                         + "<input type=Hidden name='elemento' value="+item+">"
                         + "<input type=Submit value='Detalles'>"
                         + "</form>"+"</td>";

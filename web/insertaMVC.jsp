@@ -17,7 +17,7 @@
             <br>
             <br>
             <B> Tipo:  </b>
-            <select name="tipo" id="cmbTipo" required>
+            <select name="tipo" id="tipo" required>
                 <option value="">Seleccione</option>
                 <option value="Libro">Libro</option>
                 <option value="Periodico">Periodico</option>
@@ -38,7 +38,7 @@
             <br>
             <br>
             <B> Formato:  </b>
-            <select name="tipo" id="cmbTipo" required>
+            <select name="formato" id="formato" required>
                 <option value="">Seleccione</option>
                 <option value="Electronico">Electrónico</option>
                 <option value="Impreso">Impreso</option>
